@@ -121,7 +121,7 @@ var Mods = (function(config){
 			if(_pattern[patternName]){
 				return _pattern[patternName];
 			}else{
-				throw "Der Patternhandler für "+patternName+" fehlt!";
+				throw "Der Patternhandler f&uuml;r "+patternName+" fehlt!";
 				return false;
 			}
 		},
@@ -278,7 +278,7 @@ Mods.addPattern({
 			}
 			
 		}catch(e){
-			throw "Pattern create() für 'singelton' fehlgeschlagen. " + e;
+			throw "Pattern create() f&uuml;r 'singelton' fehlgeschlagen. " + e;
 		}
 	}
 });
@@ -301,7 +301,7 @@ Mods.addPattern({
 					var parameter = RegExp.$3.replace(")","").replace("(", "").replace(" ", "").split(",")
 					var newCode = "{" + constructorExtension + RegExp.$4 + " addMethodes({"+RegExp.$5+"}) }";
 				}else{
-					throw "Pattern create() für 'class' fehlgeschlagen. Die Methoden können nicht hinzugefügt werden.";
+					throw "Pattern create() f&uuml;r 'class' fehlgeschlagen. Die Methoden k&ouml;nnen nicht hinzugef&uuml;gt werden.";
 				}
 				var newObjekt = new Function(parameter, newCode);				
 				var superClass = Mods.getModChain(mod.extend);
@@ -313,7 +313,7 @@ Mods.addPattern({
 				target[mod.name.substring(mod.name.lastIndexOf(".")+1, mod.name.length)] = mod.func;
 			}
 		}catch(e){
-			throw "Pattern create() für 'class' fehlgeschlagen. "+e;
+			throw "Pattern create() f&uuml;r 'class' fehlgeschlagen. "+e;
 		}
 	}
 });
@@ -326,7 +326,7 @@ Mods.addPattern({
 				mod.func()
 			}
 		}catch(e){
-			throw "Pattern create() für 'action' fehlgeschlagen. "+e;
+			throw "Pattern create() f&uuml;r 'action' fehlgeschlagen. "+e;
 		}
 	}
 });
